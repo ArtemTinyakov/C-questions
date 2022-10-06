@@ -1,8 +1,11 @@
 #include <iostream>
 
+struct B { void getinfo() { std::cout << "B\n";} };
+struct C { private: void getinfo() { std::cout << "C\n";} };
+struct D : B,C {};
+
 int main()
 {
-    int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    std::cout << (1 + 4)[a];                       //What will happen here?
+    D().getinfo();                    //What will happen here?
     return 0;
 }
