@@ -14,6 +14,6 @@ int g(...)
 
 int main()
 {
-    f() + g() * g();                          //What will happen here?
+    f() * (g() + g());                          //What will happen here?
     return 0;
 }
