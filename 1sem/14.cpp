@@ -2,8 +2,8 @@
 
 int main()
 {
-    int x{0};
-    sizeof(++x);
-    std::cout << x;                     //What will happen here?
+    int i{0};
+    i = ++i + i++;
+    std::cout << i;              //What will happen here?
     return 0;
 }

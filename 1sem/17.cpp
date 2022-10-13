@@ -2,8 +2,10 @@
 
 int main()
 {
-    int x{0};
-    ++x++;
-    std::cout << x;                   //What will happen here?
+    int x{5};
+    int* p = &x;
+    std::cout << *p << '\n';
+    delete p;
+    std::cout << *p;
     return 0;
 }

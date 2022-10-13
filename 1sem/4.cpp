@@ -1,11 +1,11 @@
 #include <iostream>
 
-struct B { void getinfo() { std::cout << "B\n";} };
-struct C { private: void getinfo() { std::cout << "C\n";} };
-struct D : B,C {};
-
 int main()
 {
-    D().getinfo();                    //What will happen here?
-    return 0;
+    int a = 10;
+    int b = 20;
+    int x, y;
+    x = (a, b);
+    y = a, b;
+    printf("%i %i", x, y);  // What will happen here?
 }

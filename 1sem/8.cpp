@@ -1,9 +1,19 @@
 #include <iostream>
 
+int f(...)
+{
+    std::cout << 1;
+    return 2;
+}
+
+int g(...)
+{
+    std::cout << 2;
+    return 3;
+}
+
 int main()
 {
-	int I = 1; int J = 1; int K = 1;
-	std::cout << (++I || ++J && ++K);              //What will happen here?
-	std::cout << I << J << K;                      //What will happen here?
+    f() * (g() + g());                          //What will happen here?
     return 0;
 }

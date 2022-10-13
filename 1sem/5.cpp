@@ -2,10 +2,7 @@
 
 int main()
 {
-    int a = 10;
-    int b = 20;
-    int x, y;
-    x = (a, b);
-    y = a, b;
-    printf("%i %i", x, y);  // What will happen here?
+	for (int i = 10; i-->>2>1;)                 // What will happen here?
+		printf("%i ", i);
+    return 0;
 }

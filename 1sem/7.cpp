@@ -1,12 +1,9 @@
 #include <iostream>
 
-void print(char const* str) { std::cout << str; }
-void print(short num) { std::cout << num; }
-
 int main()
 {
-	// What will happen?
-	print("abc");
-	print(0);
-	print('A');
+	int I = 1; int J = 1; int K = 1;
+	std::cout << (++I || ++J && ++K);              //What will happen here?
+	std::cout << I << J << K;                      //What will happen here?
+    return 0;
 }
